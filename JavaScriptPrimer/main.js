@@ -125,3 +125,30 @@ console.log(argumentsToArray(3,5));
         console.log(arguments[2]);
     }
     arg("a", "b", "c");
+
+    //関数の引数と分割代入
+    // const printUserId = (user) => {
+    //     console.log(user.id);
+    // }
+    // const user = {
+    //     id: 42
+    // };
+    // printUserId(user);
+    // function printUserId({ id }) {
+    // console.log(id); // => 42
+    // }
+    // const user = {
+    //     id: 42
+    // };
+    // printUserId(user);
+
+    // const {id} = user;
+    // console.log(id);
+    
+    const print = ([first, second]) => {
+        console.log(first);
+        console.log(second);
+    }
+    const array2 = [1, 5];
+    print(array2);
+    
