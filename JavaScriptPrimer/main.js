@@ -87,44 +87,44 @@
 // console.log(resultt);
 
 //8 関数
-function echo(x){
-    return x;
-}
+// function echo(x){
+//     return x;
+// }
 
-console.log(echo(1));
-console.log(echo());
+// console.log(echo(1));
+// console.log(echo());
 
-function argumentsToArray(x,y){
-    const z = x * y;
-    return z;
-}
-console.log(argumentsToArray(3,5));
+// function argumentsToArray(x,y){
+//     const z = x * y;
+//     return z;
+// }
+// console.log(argumentsToArray(3,5));
 
-    //可変長引数
-    const max = Math.max(1, 5, 10, 20);
-    console.log(max);
+//     //可変長引数
+//     const max = Math.max(1, 5, 10, 20);
+//     console.log(max);
 
-    //Rest parameters
-    function fn(...args){
-        console.log(args);
-    };
-    fn(1, 2, 3);
+//     //Rest parameters
+//     function fn(...args){
+//         console.log(args);
+//     };
+//     fn(1, 2, 3);
 
-    //Spread構文
-    const fnc = (a,b,c) => {
-        console.log(a);
-        console.log(b);
-        console.log(c);
-    }
-    const array = [1, 2, 3]
-    fnc(...array);
+//     //Spread構文
+//     const fnc = (a,b,c) => {
+//         console.log(a);
+//         console.log(b);
+//         console.log(c);
+//     }
+//     const array = [1, 2, 3]
+//     fnc(...array);
 
-    function arg(){
-        console.log(arguments[0]);
-        console.log(arguments[1]);
-        console.log(arguments[2]);
-    }
-    arg("a", "b", "c");
+//     function arg(){
+//         console.log(arguments[0]);
+//         console.log(arguments[1]);
+//         console.log(arguments[2]);
+//     }
+//     arg("a", "b", "c");
 
     //関数の引数と分割代入
     // const printUserId = (user) => {
@@ -145,10 +145,57 @@ console.log(argumentsToArray(3,5));
     // const {id} = user;
     // console.log(id);
     
-    const print = ([first, second]) => {
-        console.log(first);
-        console.log(second);
+    // const print = ([first, second]) => {
+    //     console.log(first);
+    //     console.log(second);
+    // }
+    // const array2 = [1, 5];
+    // print(array2);
+
+    //関数式
+    //functionキーワード
+    const abc = function(){
+        return "function"
     }
-    const array2 = [1, 5];
-    print(array2);
-    
+    const abcd = abc();
+    console.log(abcd);
+    //arrow function
+    const def = () =>{
+        return "arrow"
+    }
+    console.log(def());
+        //arrow functionの省略記法
+        const fnA = () => {};
+        const fnB = (x) => {};
+        const fnC = x => {};
+        const fnD = (x,y) => {};
+
+        const mulA = x => {return x*x};
+        const mulB = x => x*x;
+
+    //値を返すコールバック関数（function）
+    const array = [1, 2, 3];
+    const doubleArray = array.map(function(value){
+        return value * 2;
+    })
+    console.log(doubleArray);
+
+    //メソッド
+    const obj = {
+        method1: function(){
+            return "function";
+        },
+        method2: () => {
+            return "arrow";
+        }
+    };
+    console.log(obj.method1());
+    console.log(obj.method2());
+
+    //メソッドの短縮記法
+    const obj1 = {
+        method() {
+            return "this is method";
+        }
+    };
+    console.log(obj1.method());
