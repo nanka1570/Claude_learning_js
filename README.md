@@ -4,282 +4,262 @@ JavaScript学習用
 Claudeを使用し、JavaScriptの学習を行う。
 目標は、Reactの学習まで。
 
-# JavaScript学習ロードマップ
+# 📚 React Learning Journey & Portfolio
 
-## 📅 学習スケジュール
+> Web開発エンジニアへの転職を目指した3ヶ月間の学習記録とポートフォリオ
 
-### Phase 1: JavaScript基礎（6週間）- 11/1〜12/15
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Learning](https://img.shields.io/badge/Status-Learning-success)](https://github.com/nanka1570)
 
-#### ✅ Week 1: JavaScript超基礎（11/1〜11/3）
+## 👨‍💻 About Me
 
-| 日付 | 学習内容 | 進捗 | メモ |
-|------|---------|------|------|
-| **11/1（金）** | コメント、変数と宣言、値の評価と表示 | ✅ | Node.js・VSCode環境構築、const/let理解 |
-| **11/2（土）** | データ型とリテラル | ✅ | プリミティブ型とオブジェクトの違い理解 |
-| **11/3（日）** | 演算子、暗黙的な型変換 | ✅ | 三項演算子、Nullish coalescing理解 |
+新卒1年目エンジニア（組み込み系）から Web 開発エンジニアへの転職を目指して学習中です。
 
-**Week 1の成果**：
-- 変数宣言（const/let）を理解
-- データ型を理解
-- 演算子を理解
-- GitHubアカウント作成、初pushに成功
+- 🎓 情報系専門学校卒業
+- 💼 現在：組み込み系エンジニア（1年目）
+- 🎯 目標：Web開発企業への転職（React使用）
+- 📅 学習期間：2025年11月〜2026年2月（3ヶ月）
+- ⏰ 学習時間：平日1時間、休日3〜4時間
 
----
+## 🎯 Portfolio Projects
 
-#### ✅ Week 2: 関数と配列（11/4〜11/10）
+### 🏆 施設予約システム（React版）
 
-| 日付 | 学習内容 | 進捗 | メモ |
-|------|---------|------|------|
-| **11/4（月）** | 暗黙的な型変換の復習 | ✅ | 厳密等価演算子の重要性理解 |
-| **11/5（火）** | - | - | - |
-| **11/6（水）** | - | - | - |
-| **11/7（木）** | 関数と宣言（30%） | ⏸️ | 関数宣言、デフォルト引数 |
-| **11/8（金）** | 関数と宣言（50%） | ⏸️ | Rest parameters、Spread構文 |
-| **11/9（土）** | 関数と宣言（完了）、配列 | 🔄 | アロー関数、配列メソッド（map/filter） |
-| **11/10（日）** | オブジェクト、ループ | 🔄 | オブジェクト操作、for/forEach |
+> 専門学校の卒業制作（PHP + SQL Server）をモダンなWeb技術で再実装
 
-**Week 2の目標**：
-- 関数を理解（アロー関数含む）
-- 配列操作を理解（map/filter/reduce）
-- オブジェクトを理解
-- TODOアプリを作成
+**Status**: 🔄 開発予定（2026年1月6日〜2月9日）  
+**Demo**: Coming soon  
+**Repository**: Coming soon
 
----
+#### 予定機能
+- ユーザー認証（ログイン・登録）
+- 施設予約の作成・編集・削除
+- 予約状況のカレンダー表示
+- デジタルサイネージ表示
+- 管理者ダッシュボード
 
-#### 🔄 Week 3-4: JavaScript中級（11/11〜11/24）
-
-<!-- | **11/11（月）** | 条件分岐（if/switch） | 📝 | - | -->
-| 日付 | 学習内容 | 進捗 | メモ |
-|------|---------|------|------|
-| **11/11（月）** | 休息日（会社でC++環境構築） | - | Udemy講座購入 |
-| **11/12（火）** | ループと反復処理 | 📝 | - |
-| **11/13（水）** | 分割代入 | 📝 | - |
-| **11/14（木）** | スプレッド構文（復習） | 📝 | - |
-| **11/15（金）** | 復習とミニプロジェクト | 📝 | - |
-| **11/16（土）** | 非同期処理（Promise） | 📝 | - |
-| **11/17（日）** | async/await、fetch API | 📝 | ユーザー情報取得アプリ |
-| **11/18（月）** | ECMAScriptモジュール | 📝 | import/export |
-| **11/19（火）** | クラス構文 | 📝 | - |
-| **11/20（水）** | Optional Chaining（?.） | 📝 | - |
-| **11/21（木）** | エラーハンドリング | 📝 | try/catch |
-| **11/22（金）** | 復習 | 📝 | - |
-| **11/23（土）** | JavaScript Primer TODOアプリ | 📝 | - |
-| **11/24（日）** | Udemyセール確認・購入 | 📝 | React入門講座購入予定 |
-
-**Week 3-4の目標**：
-- 非同期処理を理解
-- API連携ができる
-- モジュールを理解
-- TODOアプリ完成版を作成
+#### 技術スタック
+- **Frontend**: React 18, React Router
+- **Backend**: Supabase（認証・DB）
+- **Deploy**: Vercel
 
 ---
 
-#### 📝 Week 5-6: 総まとめ（11/25〜12/15）
+### 📦 学習プロジェクト
 
-| 期間 | 学習内容 | メモ |
-|------|---------|------|
-| **11/25〜12/1** | 卒業制作のコード整理 | PHP版をGitHubに公開 |
-| **12/2〜12/8** | ポートフォリオサイト制作 | HTML/CSS/JavaScriptで作成 |
-| **12/9〜12/15** | JavaScript復習、React準備 | Udemy講座視聴開始 |
+学習過程で作成した小規模アプリケーション
 
-**Week 5-6の目標**：
-- 卒業制作をGitHubに公開
-- ポートフォリオサイト基礎版完成
-- JavaScriptの完全定着
+#### 1. ToDoリスト with API
+- **Status**: 🔄 予定（12月）
+- **機能**: タスク管理、フィルタリング、LocalStorage
+- **技術**: React, useState, useEffect
 
----
+#### 2. Weather Dashboard
+- **Status**: 🔄 予定（12月）
+- **機能**: 外部API連携、都市検索、天気予報
+- **技術**: React, Axios, async/await
 
-### Phase 2: React基礎（6週間）- 12/16〜1/26
-
-#### Week 1-2: React超基礎（12/16〜12/29）
-
-| 学習内容 | メモ |
-|---------|------|
-| Reactとは何か | コンポーネント思考 |
-| JSXの書き方 | HTMLライクな構文 |
-| Props（プロパティ） | コンポーネント間のデータ受け渡し |
-| State（状態） | useState Hook |
-| イベントハンドリング | onClick, onChange |
-
-**成果物**：
-- Hello Worldアプリ
-- カウンターアプリ
-- 簡単なTODOアプリ
+#### 3. Simple Blog
+- **Status**: 🔄 予定（1月）
+- **機能**: 記事一覧・詳細、React Router
+- **技術**: React, React Router
 
 ---
 
-#### Week 3-4: React中級（12/30〜1/12）
+## 📊 学習進捗
 
-| 学習内容 | メモ |
-|---------|------|
-| useEffect | 副作用の処理 |
-| リスト表示 | mapを使った動的レンダリング |
-| 条件付きレンダリング | 三項演算子、&& |
-| フォーム処理 | Controlled Components |
-| API連携 | fetchでデータ取得 |
+### 現在のフェーズ
 
-**成果物**：
-- TODOアプリ（React版）
-- お天気アプリ（API連携）
+**Phase 1: JavaScript基礎（11/13〜11/24）** - 🔄 **進行中（40%）**
 
----
+| フェーズ | 期間 | 内容 | 状態 | 進捗 |
+|---------|------|------|------|------|
+| **Phase 1**<br>JavaScript基礎 | 11/13〜11/24 | JavaScript Primer<br>Udemy講座開始 | 🔄 進行中 | ⬛⬛⬜⬜⬜ 40% |
+| **Phase 2**<br>React基礎 | 11/25〜1/5 | Udemy講座完走<br>小規模アプリ作成 | ⏳ 未開始 | ⬜⬜⬜⬜⬜ 0% |
+| **Phase 3**<br>ポートフォリオ | 1/6〜2/9 | 施設予約システム開発 | ⏳ 未開始 | ⬜⬜⬜⬜⬜ 0% |
+| **Phase 4**<br>転職活動 | 2/10〜 | TypeScript学習<br>面接対策 | ⏳ 未開始 | ⬜⬜⬜⬜⬜ 0% |
 
-#### Week 5-6: React実践（1/13〜1/26）
-
-| 学習内容 | メモ |
-|---------|------|
-| React Router | ページ遷移 |
-| カスタムフック | ロジックの再利用 |
-| コンポーネント設計 | 再利用可能な設計 |
-| Supabase | バックエンド連携 |
-
-**成果物**：
-- ブログアプリ（一覧・詳細ページ）
-- 施設予約システム（React版・簡易版）
+**累計学習時間**: 約15時間（2025/11/13時点）  
+**目標学習時間**: 約125〜130時間（3ヶ月）
 
 ---
 
-### Phase 3: ポートフォリオ制作（2週間）- 1/27〜2/9
+## 📚 学習内容
 
-#### Week 1: 施設予約システム制作（1/27〜2/2）
+### ✅ Week 1 完了（11/1〜11/10）
 
-| 実装内容 |
-|---------|
-| ログイン画面 |
-| 予約一覧 |
-| 予約追加 |
-| 予約削除 |
+<details>
+<summary>学んだ内容を見る</summary>
 
-**技術スタック**：
-- フロントエンド：React
-- バックエンド：Supabase
-- デプロイ：Vercel
+- コメント、変数宣言（const/let）、値の評価
+- データ型とリテラル（プリミティブ型、オブジェクト）
+- 演算子、暗黙的な型変換、Nullish coalescing
+- 関数（デフォルト引数、Rest parameters）
+- 分割代入（オブジェクト・配列）
+- Arrow Function、コールバック関数
 
----
+**重要な理解**
+- `const` vs `let`：`const`を優先、再代入が必要な場合のみ`let`
+- Arrow Function：Reactで毎日使う、`arguments`は使えない
+- 分割代入：Reactのpropsで必須
+- コールバック関数：map/filterなどで使用
 
-#### Week 2: デプロイと仕上げ（2/3〜2/9）
+</details>
 
-| やること |
-|---------|
-| Vercelでデプロイ |
-| README充実 |
-| ポートフォリオサイトに追加 |
-| デモ動画作成（任意） |
+### 🔄 Week 2 進行中（11/13〜11/17）
 
-**成果物**：
-- 実際に動くWebアプリ（公開URL）
-- GitHubリポジトリ
-- 転職活動で使えるポートフォリオ
+- [ ] 条件分岐、ループ（if、switch、for、while）
+- [ ] 配列メソッド（map、filter、reduce、find、some/every）
+- [ ] オブジェクト操作、スプレッド構文
+- [ ] 非同期処理（Promise、async/await）
+- [ ] モジュール（import/export）
+- [ ] DOM操作
 
----
+### 📅 Week 3以降の予定（11/18〜）
 
-### Phase 4: 転職活動 + TypeScript学習（2/10〜）
-
-#### 転職活動（2/10〜）
-
-| やること |
-|---------|
-| エージェントに連絡 |
-| 求人応募 |
-| 面接対策 |
-
-**アピールポイント**：
-- Reactでポートフォリオを作成
-- 実際に動くアプリあり
-- JavaScriptの基礎習得済み
-- TypeScript学習中
+- Udemy講座「モダンJavaScriptの基礎から始める挫折しないためのReact入門」
+- React基礎（JSX、コンポーネント、Props、State、useEffect）
+- 小規模アプリ作成（ToDoリスト、Weather Dashboard、Simple Blog）
 
 ---
 
-#### TypeScript学習（並行）
+## 🛠️ 技術スタック
 
-| 学習内容 | 期間 |
-|---------|------|
-| TypeScript基礎 | 3〜4週間 |
-| React + TypeScript化 | 2週間 |
+### 現在学習中
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
 
-**目標**：
-- 内定後、入社前にTypeScript習得
-- 既存のReactアプリをTypeScript化
+### 今後学習予定
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
+![Supabase](https://img.shields.io/badge/-Supabase-3ECF8E?logo=supabase&logoColor=white)
+![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white)
+
+### 専門学校で学習済み
+- Java（一番勉強した、応用も効く）
+- PHP（卒業制作でメイン使用）
+- SQL Server
 
 ---
 
-## 📊 進捗状況（現在）
+## 📖 使用教材
 
-### 全体の進捗
+### メイン教材
+1. **JavaScript Primer**（無料）
+   - URL: https://jsprimer.net/
+   - 進捗：約40%
+
+2. **Udemy講座**（購入済み）
+   - 「モダンJavaScriptの基礎から始める挫折しないためのReact入門」
+   - 約9時間、11/18から開始予定
+
+3. **Git講座**（購入済み）
+   - 「もう怖くないGit！チーム開発で必要なGitを完全マスター」
+   - 11/16-17に受講予定
+
+### サブ教材
+- **YouTube**: セイト先生のWEB・ITエンジニア転職ラボ
+- **MDN Web Docs**: JavaScriptリファレンス
+- **React公式ドキュメント**: https://ja.react.dev/
+
+---
+
+## 📂 リポジトリ構成
+
 ```
-Phase 1: JavaScript基礎 ████████░░░░░░░░░░ 40%
-Phase 2: React基礎      ░░░░░░░░░░░░░░░░░░░░  0%
-Phase 3: ポートフォリオ  ░░░░░░░░░░░░░░░░░░░░  0%
-Phase 4: 転職活動       ░░░░░░░░░░░░░░░░░░░░  0%
-```
-
-### Phase 1の詳細進捗
-```
-Week 1: JavaScript超基礎    ████████████████████ 100%
-Week 2: 関数と配列          ████████░░░░░░░░░░░░  40%
-Week 3-4: JavaScript中級    ░░░░░░░░░░░░░░░░░░░░   0%
-Week 5-6: 総まとめ          ░░░░░░░░░░░░░░░░░░░░   0%
+Claude_learning_js/
+├── js-practice/           # コード練習用
+│   ├── week1/            # 変数、関数、基本構文
+│   ├── week2/            # 配列、オブジェクト、非同期処理
+│   └── week3/            # React基礎練習
+├── JavaScriptPrimer/     # 学習メモ（Markdown）
+│   ├── 01_comments_variables.md
+│   ├── 02_data_types.md
+│   └── ...
+├── small-projects/       # 小規模プロジェクト
+│   ├── todo-app/
+│   ├── weather-dashboard/
+│   └── simple-blog/
+└── README.md             # このファイル
 ```
 
 ---
 
-## 🎯 今週の目標（11/9〜11/10）
+## 💡 学習方針
 
-### 11/9（土）
-- [ ] 関数と宣言（残り50%）を完了
-- [ ] アロー関数を理解
-- [ ] 配列メソッド（map/filter）を学習
-- [ ] GitHubにpush
+### 🎯 学習ルール
 
-### 11/10（日）
-- [ ] オブジェクト操作を学習
-- [ ] ループと反復処理を学習
-- [ ] 簡単なTODOアプリを作成
-- [ ] GitHubにpush
+#### 507日ルール
+毎日5〜10分は**必ず**学習する
+- 韓国語学習を507日継続した実績あり
+- 体調が悪い日も、最低限は続ける
 
----
+#### 10分ルール
+10分以上悩んだらClaude/ChatGPTに質問
+- 効率的に学習を進める
 
-## 📚 使用教材
-
-### メイン
-- [JavaScript Primer](https://jsprimer.net/)
-- セイト先生のWEB・ITエンジニア転職ラボ（YouTube）
-
-### サブ
-- しまぶーのIT大学（YouTube）
-- MDN Web Docs
-
-### React学習（12月以降）
-- Udemy「モダンJavaScriptの基礎から始める挫折しないためのReact入門」
-- React公式ドキュメント
-
----
-
-## 💡 学習のルール
-
-### 507日ルール
-- 毎日5〜10分は必ず学習（通勤時間活用）
-- 継続が最優先
-
-### 10分ルール
-- 10分悩んだらClaude/ChatGPTに質問
-- 効率的に学習
-
-### 無理しないルール
-- 週1日は休息
+#### 無理しないルール
+- 週1日は休息OK
 - 体調優先
-- 23:00には寝る
+- 完璧を目指さない
+
+### 📝 学習スタイル
+- 「動かしながら学ぶ」「作りながら理解する」
+- コードを書く時間を最優先（読む:書く = 3:7）
+- メモは簡潔に（詳細すぎると時間がかかる）
+- 実務での使用頻度を意識
 
 ---
 
-## 🔗 リンク
+## 📈 重要なマイルストーン
 
-- [GitHubリポジトリ](https://github.com/nanka1570/Claude_learning_js)
-- [JavaScript Primer](https://jsprimer.net/)
-- [React公式ドキュメント](https://ja.react.dev/)
+| 日付 | マイルストーン | 達成状況 |
+|------|--------------|---------|
+| **11/17** | JavaScript基礎完了 | ⏳ 予定 |
+| **11/24** | Udemy React章突入 | ⏳ 予定 |
+| **12/22** | React基礎習得完了 | ⏳ 予定 |
+| **1/12** | ポートフォリオ設計完了 | ⏳ 予定 |
+| **2/2** | 主要機能実装完了 | ⏳ 予定 |
+| **2/9** | ポートフォリオ完成 | ⏳ 予定 |
 
 ---
 
-**最終更新日**: 2025/11/08
+## 🎓 開発環境
 
+- **OS**: Windows
+- **エディタ**: VSCode
+- **Node.js**: インストール済み
+- **Git**: インストール済み
+- **GitHub**: [@nanka1570](https://github.com/nanka1570)
+
+---
+
+## 🔗 関連リンク
+
+- **JavaScript Primer**: https://jsprimer.net/
+- **React公式**: https://ja.react.dev/
+- **MDN Web Docs**: https://developer.mozilla.org/ja/
+
+---
+
+## 📬 Contact
+
+- **GitHub**: [@nanka1570](https://github.com/nanka1570)
+- **Email**: （転職活動本格化後に公開予定）
+
+---
+
+## 📊 今週の目標（11/13〜11/17）
+
+- [ ] 配列メソッド（map、filter、reduce）をマスター
+- [ ] スプレッド構文を理解
+- [ ] 非同期処理の基本を把握
+- [ ] Git講座を受講（11/16-17）
+- [ ] 転職準備（職務経歴書、履歴書作成）
+
+---
+
+**最終更新：2025年11月13日**
