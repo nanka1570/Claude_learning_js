@@ -126,7 +126,7 @@
 //     }
 //     arg("a", "b", "c");
 
-    //関数の引数と分割代入
+//関数の引数と分割代入
     // const printUserId = (user) => {
     //     console.log(user.id);
     // }
@@ -152,50 +152,111 @@
     // const array2 = [1, 5];
     // print(array2);
 
-    //関数式
-    //functionキーワード
-    const abc = function(){
-        return "function"
+// //関数式
+    // //functionキーワード
+    // const abc = function(){
+    //     return "function"
+    // }
+    // const abcd = abc();
+    // console.log(abcd);
+    // //arrow function
+    // const def = () =>{
+    //     return "arrow"
+    // }
+    // console.log(def());
+    //     //arrow functionの省略記法
+    //     const fnA = () => {};
+    //     const fnB = (x) => {};
+    //     const fnC = x => {};
+    //     const fnD = (x,y) => {};
+
+    //     const mulA = x => {return x*x};
+    //     const mulB = x => x*x;
+
+    // //値を返すコールバック関数（function）
+    // const array = [1, 2, 3];
+    // const doubleArray = array.map(function(value){
+    //     return value * 2;
+    // })
+    // console.log(doubleArray);
+
+    // //メソッド
+    // const obj = {
+    //     method1: function(){
+    //         return "function";
+    //     },
+    //     method2: () => {
+    //         return "arrow";
+    //     }
+    // };
+    // console.log(obj.method1());
+    // console.log(obj.method2());
+
+    // //メソッドの短縮記法
+    // const obj1 = {
+    //     method() {
+    //         return "this is method";
+    //     }
+    // };
+    // console.log(obj1.method());
+
+//条件分岐
+//if文とelse文
+    // const fnc = (x) => {
+    //     if(x % 2 === 0){
+    //         console.log("偶数")
+    //     }else{
+    //         console.log("奇数")
+    //     }
+    // };
+    // fnc(5);
+
+    // const year = new Date().getFullYear();
+    // if(year % 4 === 0 && year % 100 !== 0 && year % 400 === 0){
+    //     console.log(`${year}年はうるう年です。`);
+    // }else{
+    //     console.log(`${year}年はうるう年ではありません。`);
+    // }
+
+    // // if文とelse if文
+    // const version = "ES6";
+    // if(version === "ES5"){
+    //     console.log("ECMAScript 5");
+    // }else if(version === "ES6"){
+    //     console.log("ECMAScript 2015");
+    // }else if(version === "ES7"){
+    //     console.log("ECMAScript 2016");
+    // }else{
+    //     console.log("知らないバージョンです");
+    // }
+
+    // // switch文
+    // switch (version){
+    //     case "ES5":
+    //         console.log("ECMAScript 5");
+    //         break;
+    //     case "ES6":
+    //         console.log("ECMAScript 2015");
+    //         break;
+    //     case "ES7":
+    //         console.log("ECMAScript 2016");
+    //         break;
+    //     default:
+    //         console.log("知らないバージョンです。");
+    //         break;
+    // }
+
+function getECMAScriptName(version) {
+    switch (version){
+        case "ES5":
+            return "ECMAScript 5";
+        case "ES6":
+            return "ECMAScript 2015";
+        case "ES7":
+            return "ECMAScript 2016";
+        default:
+            return "知らないバージョンです。";
     }
-    const abcd = abc();
-    console.log(abcd);
-    //arrow function
-    const def = () =>{
-        return "arrow"
-    }
-    console.log(def());
-        //arrow functionの省略記法
-        const fnA = () => {};
-        const fnB = (x) => {};
-        const fnC = x => {};
-        const fnD = (x,y) => {};
+}
+console.log(getECMAScriptName("ES7"));
 
-        const mulA = x => {return x*x};
-        const mulB = x => x*x;
-
-    //値を返すコールバック関数（function）
-    const array = [1, 2, 3];
-    const doubleArray = array.map(function(value){
-        return value * 2;
-    })
-    console.log(doubleArray);
-
-    //メソッド
-    const obj = {
-        method1: function(){
-            return "function";
-        },
-        method2: () => {
-            return "arrow";
-        }
-    };
-    console.log(obj.method1());
-    console.log(obj.method2());
-
-    //メソッドの短縮記法
-    const obj1 = {
-        method() {
-            return "this is method";
-        }
-    };
-    console.log(obj1.method());
