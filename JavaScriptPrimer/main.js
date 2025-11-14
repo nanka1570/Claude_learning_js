@@ -366,18 +366,20 @@
 // const firstMinor = users.find(user => user.age < 20);
 // console.log(firstMinor);  // 何が表示される？
 
-// //some（一つでも偶数があったらTrueを返す）
-// const array = [1, 5, 10];
-// const isEvenIncluded = (inputArray) =>{
-//     // const numJudge = inputArray.some(num => {
-//     //     return num % 2 === 0;
-//     // });
-//     const numJudge = inputArray.some(num => num % 2 === 0);
-//     console.log("numJudgeの値:", numJudge);  // ← これを追加
-//     console.log("numJudgeの型:", typeof numJudge);  // ← これも
-//     if(numJudge === true){
-//         return "配列に偶数が含まれます。";
-//     }
-// };
+//some（一つでも偶数があったらTrueを返す）
+const array = [1, 5, 10];
+const isEvenIncluded = (inputArray) =>{
+    // const numJudge = inputArray.some(num => {
+    //     return num % 2 === 0;
+    // });
+    const numJudge = inputArray.some(num => num % 2 === 0);
+    console.log("numJudgeの値:", numJudge);  // ← これを追加
+    console.log("numJudgeの型:", typeof numJudge);  // ← これも
+    if(numJudge === true){
+        return "配列に偶数が含まれます。";
+    }else{
+        return "配列に奇数が含まれます。";
+    }
+};
 
-// console.log(isEvenIncluded(array));
+console.log(isEvenIncluded(array));
