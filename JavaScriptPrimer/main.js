@@ -246,17 +246,138 @@
     //         break;
     // }
 
-function getECMAScriptName(version) {
-    switch (version){
-        case "ES5":
-            return "ECMAScript 5";
-        case "ES6":
-            return "ECMAScript 2015";
-        case "ES7":
-            return "ECMAScript 2016";
-        default:
-            return "知らないバージョンです。";
-    }
-}
-console.log(getECMAScriptName("ES7"));
+// function getECMAScriptName(version) {
+//     switch (version){
+//         case "ES5":
+//             return "ECMAScript 5";
+//         case "ES6":
+//             return "ECMAScript 2015";
+//         case "ES7":
+//             return "ECMAScript 2016";
+//         default:
+//             return "知らないバージョンです。";
+//     }
+// }
+// console.log(getECMAScriptName("ES7"));
 
+// //while文
+// let x = 0;
+// while(x < 10){
+//     console.log(x);
+//     x++;
+// }
+
+// //for文
+// for (let y = 0; y < 10; y++){
+//     console.log(y);
+// }
+
+// const sumNumber = (Narray) =>{
+//     let x = 0;
+//     for(let i = 0; i < Narray.length; i++){
+//         x += Narray[i];
+//         console.log(x);
+//     }
+// }
+
+// const array = [1, 2, 3, 4, 5];
+// sumNumber(array);
+
+//foEach
+// const array = [1, 2, 3, 4, 5];
+// array.forEach(fnc=> {
+//     console.log(fnc);
+// });
+
+// // const fnc = () =>{
+// //     //空の関数
+// // }
+
+// //for文でやったやつ
+// const sum = (array) => {
+//     let result = 0;
+//     array.forEach(num => {
+//         result += num;
+//     });
+//     return result;
+// };
+
+// console.log(sum([1, 2, 3, 4, 5]));
+
+//break文
+// const isEvenIncluded = (array) => {
+//     array.forEach(num => {
+//         if(num % 2 === 0){
+//             return `${num}は偶数です。`;
+//         }else{
+//             return `${num}は奇数です。`;
+//         }
+//     });
+// };
+
+// const array1 = [1, 3, 5, 8, 10]
+// console.log(isEvenIncluded(array1));
+
+// //forEachの中でbreakは使えない。
+// const isEvenIncluded = (array) => {
+//     array.forEach(num => {
+//         if(num % 2 === 0){
+//             console.log(`${num}は偶数です。`);
+//             break;
+//         }
+//     });
+// };
+
+// const array1 = [1, 3, 5, 8, 10]
+// isEvenIncluded(array1);
+
+//成功（偶数の値を配列から見つけたらループを抜けて出力）
+// const isEvenIncluded = (array) => {
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] % 2 === 0) {
+//             return `${array[i]}は偶数です。`;
+//             // break;
+//         }
+//     }
+// };
+
+// const array1 = [1, 3, 5, 8, 10];
+// console.log(isEvenIncluded(array1));
+
+// const array2 = [1, 3, 5, 7, 9];
+// console.log(isEvenIncluded(array2));
+
+// //練習（some, every, find）
+// const users = [
+//     { name: "太郎", age: 25 },
+//     { name: "花子", age: 18 },
+//     { name: "次郎", age: 30 }
+// ];
+
+// // some - 1人でも20歳未満がいるか
+// const hasMinor = users.some(user => user.age < 20);
+// console.log(hasMinor);  // 何が表示される？
+
+// // every - 全員が20歳以上か
+// const allAdults = users.every(user => user.age >= 20);
+// console.log(allAdults);  // 何が表示される？
+
+// // find - 20歳未満の最初の人
+// const firstMinor = users.find(user => user.age < 20);
+// console.log(firstMinor);  // 何が表示される？
+
+// //some（一つでも偶数があったらTrueを返す）
+// const array = [1, 5, 10];
+// const isEvenIncluded = (inputArray) =>{
+//     // const numJudge = inputArray.some(num => {
+//     //     return num % 2 === 0;
+//     // });
+//     const numJudge = inputArray.some(num => num % 2 === 0);
+//     console.log("numJudgeの値:", numJudge);  // ← これを追加
+//     console.log("numJudgeの型:", typeof numJudge);  // ← これも
+//     if(numJudge === true){
+//         return "配列に偶数が含まれます。";
+//     }
+// };
+
+// console.log(isEvenIncluded(array));
