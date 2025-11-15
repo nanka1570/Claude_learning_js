@@ -367,19 +367,68 @@
 // console.log(firstMinor);  // 何が表示される？
 
 //some（一つでも偶数があったらTrueを返す）
-const array = [1, 5, 10];
-const isEvenIncluded = (inputArray) =>{
-    // const numJudge = inputArray.some(num => {
-    //     return num % 2 === 0;
-    // });
-    const numJudge = inputArray.some(num => num % 2 === 0);
-    console.log("numJudgeの値:", numJudge);  // ← これを追加
-    console.log("numJudgeの型:", typeof numJudge);  // ← これも
-    if(numJudge === true){
-        return "配列に偶数が含まれます。";
-    }else{
-        return "配列に奇数が含まれます。";
-    }
+// const array = [1, 5, 10];
+// const isEvenIncluded = (inputArray) =>{
+//     // const numJudge = inputArray.some(num => {
+//     //     return num % 2 === 0;
+//     // });
+//     const numJudge = inputArray.some(num => num % 2 === 0);
+//     console.log("numJudgeの値:", numJudge);  // ← これを追加
+//     console.log("numJudgeの型:", typeof numJudge);  // ← これも
+//     if(numJudge === true){
+//         return "配列に偶数が含まれます。";
+//     }else{
+//         return "配列に奇数が含まれます。";
+//     }
+// };
+
+// console.log(isEvenIncluded(array));
+
+// continue文
+// const isEven = (num) => num % 2 === 0;
+// const filterEven = (numbers) => {
+//     const result = [];
+//     for (let i = 0; i < numbers.length; i++){
+//        const num = numbers[i];
+//         if(!isEven(num)){
+//             continue;
+//         }
+//         result.push(num);
+//     }
+//     return result;
+// };
+// const array = [1, 5, 10, 15, 20];
+// console.log(filterEven(array));
+
+//filterメソッド
+// const array = [1, 5, 10, 15, 20];
+// const isEven = (num) => num % 2 === 0;
+// const result = array.filter(isEven);
+// console.log(result);
+
+//for...in文
+const obj = {
+    "a": 1,
+    "b": 2,
+    "c": 3
 };
 
-console.log(isEvenIncluded(array));
+// for(const key in obj){
+//     const value = obj[key];
+//     console.log(`key:${key}, value:${value}`);
+// }
+
+Object.keys(obj).forEach(key => {
+    const value = obj[key];
+    console.log(`key:${key}, value:${value}`);
+});
+
+const array = [1, 2, 3];
+for(const value of array){
+    console.log(value);
+}
+
+const array2 = "あいうえお";
+for(const value of array2){
+    console.log(value);
+}
