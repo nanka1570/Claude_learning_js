@@ -406,29 +406,41 @@
 // const result = array.filter(isEven);
 // console.log(result);
 
-//for...in文
-const obj = {
-    "a": 1,
-    "b": 2,
-    "c": 3
-};
+// //for...in文
+// const obj = {
+//     "a": 1,
+//     "b": 2,
+//     "c": 3
+// };
 
 // for(const key in obj){
 //     const value = obj[key];
 //     console.log(`key:${key}, value:${value}`);
 // }
 
-Object.keys(obj).forEach(key => {
-    const value = obj[key];
-    console.log(`key:${key}, value:${value}`);
-});
+// Object.keys(obj).forEach(key => {
+//     const value = obj[key];
+//     console.log(`key:${key}, value:${value}`);
+// });
 
-const array = [1, 2, 3];
-for(const value of array){
-    console.log(value);
-}
+// const array = [1, 2, 3];
+// for(const value of array){
+//     console.log(value);
+// }
 
-const array2 = "あいうえお";
-for(const value of array2){
-    console.log(value);
-}
+// const array2 = "あいうえお";
+// for(const value of array2){
+//     console.log(value);
+// }
+
+//配列
+//インデックスを取得
+const array = ["Java", "JavaScript", "Ruby", "JavaScript"];
+const indexOfJs = array.indexOf("JavaScript");
+console.log(indexOfJs);
+
+const lastIndexOfJs = array.lastIndexOf("JavaScript");
+console.log(lastIndexOfJs);
+
+console.log(array[indexOfJs]);
+console.log(array[lastIndexOfJs]);
