@@ -434,13 +434,115 @@
 // }
 
 //配列
+//分割代入
+// const array = ["one", "two", "three"];
+// const [first, second, third] = array;
+// console.log(first);
+// console.log(second);
+// console.log(third);
+
+// //Object.hasOwn静的メソッド
+// const denseArray = [1, undefined, 3];
+// const sparseArray = [1, , 3];
+// console.log(Object.hasOwn(denseArray, 1));
+// console.log(Object.hasOwn(sparseArray, 1));
+
 //インデックスを取得
-const array = ["Java", "JavaScript", "Ruby", "JavaScript"];
-const indexOfJs = array.indexOf("JavaScript");
-console.log(indexOfJs);
+// const array = ["Java", "JavaScript", "Ruby", "JavaScript"];
+// const indexOfJs = array.indexOf("JavaScript");
+// console.log(indexOfJs);
 
-const lastIndexOfJs = array.lastIndexOf("JavaScript");
-console.log(lastIndexOfJs);
+// const lastIndexOfJs = array.lastIndexOf("JavaScript");
+// console.log(lastIndexOfJs);
 
-console.log(array[indexOfJs]);
-console.log(array[lastIndexOfJs]);
+// console.log(array[indexOfJs]);
+// console.log(array[lastIndexOfJs]);
+
+//findindexjメソッド
+// const colors = [
+//     {"color": "red"},
+//     {"color": "green"},
+//     {"color": "blue"}
+// ];
+// const indexOfBlue = colors.findIndex((obj) =>{
+//     return obj.color == "blue";
+// });
+// console.log(indexOfBlue);
+// console.log(colors[indexOfBlue]);
+
+// //条件に一致する要素を検索
+// const records = [
+//     { date: "2020/12/1", count: 5 },
+//     { date: "2020/12/2", count: 11 },
+//     { date: "2020/12/3", count: 9 },
+//     { date: "2020/12/4", count: 12 },
+//     { date: "2020/12/5", count: 3 }
+// ];
+// const fistRecordIndex = records.findIndex((record) =>{
+//     return record.count > 10;
+// });
+// const lastRecordIndex = records.findLastIndex((record) =>{
+//     return record.count > 10;
+// });
+// const dateRecordIndex = records.findIndex((record) =>{
+//     return record.date === "2020/12/5";
+// });
+// console.log(fistRecordIndex);
+// console.log(records[fistRecordIndex]);
+// console.log(lastRecordIndex);
+// console.log(records[lastRecordIndex]);
+// console.log(dateRecordIndex);
+
+// //指定範囲の要素を取得
+// const array = ["A", "B", "C", "D", "E"];
+
+// console.log(array.slice(0, 2));
+// console.log(array.slice(2, 4));
+// console.log(array.slice(0));
+// console.log(array.slice(0, 4));
+// console.log(array.slice(0, 5));
+// console.log(array.slice(1, 1));
+// console.log(array.slice(4, 1));
+
+//includesメソッド
+// const array = ["Java", "JavaScript", "Ruby"];
+
+// if(array.includes("JavaScript")){
+//     console.log(("配列にJavaScriptが含まれている"));
+// }
+// console.log(array.includes("JavaScript"));
+//someメソッド
+// const colors = [
+//     { "color": "red" },
+//     { "color": "green" },
+//     { "color": "blue" }
+// ];
+// const isIncludedBlueColor = colors.some(obj => {
+//     return obj.color === "blue";
+// });
+// console.log(isIncludedBlueColor);
+
+//追加と削除
+//末尾へ（push, pop）
+// const array = ["A", "B", "C"];
+// array.push("D", "E");
+// console.log(array);
+// const poppedItem = array.pop();
+// console.log(poppedItem);
+// console.log(array);
+//先頭へ（unshift, shift）
+// const array = ["A", "B", "C"];
+// array.unshift(0);
+// console.log(array);
+// const shiftedItem = array.shift();
+// console.log(array);
+
+//配列同士を結合
+const array = ["A", "B", "C"];
+const array2 = ["D", "E"];
+//下でもう一度結合するためにletにしている
+let newArray = array.concat(array2);
+console.log(newArray);
+//任意の値を結合
+newArray = array.concat("新しい要素");
+console.log(newArray);
