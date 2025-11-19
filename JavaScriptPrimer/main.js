@@ -537,12 +537,45 @@
 // const shiftedItem = array.shift();
 // console.log(array);
 
-//配列同士を結合
-const array = ["A", "B", "C"];
-const array2 = ["D", "E"];
-//下でもう一度結合するためにletにしている
-let newArray = array.concat(array2);
-console.log(newArray);
-//任意の値を結合
-newArray = array.concat("新しい要素");
-console.log(newArray);
+// //配列同士を結合
+// const array = ["A", "B", "C"];
+// const array2 = ["D", "E"];
+// //下でもう一度結合するためにletにしている
+// let newArray = array.concat(array2);
+// console.log(newArray);
+// //任意の値を結合
+// newArray = array.concat("新しい要素");
+// console.log(newArray);
+// //spread構文の結合
+// const array = ["A", "B", "C"];
+// const newArray = ["X", "Y", "Z", ...array];
+// //concatの結合
+// const newArrayConcat = ["X", "Y", "Z"].concat(array);
+// console.log(newArray);
+// console.log(newArrayConcat);
+// //任意の位置
+// const newArray2 = ["X", ...array, "Y", "Z"];
+// console.log(newArray2);
+
+// ///任意の要素を削除
+    // const array = ["a", "b", "c",];
+    // const arrayConcat = ["D", "E", "F"];
+    // const arrayRM = array.splice(0, 1, ...arrayConcat);
+    // console.log(arrayRM);
+    // console.log(array);
+
+    // //配列の要素をすべて削除
+    // // spliceメソッドを使う方法
+    // const array = ["a", "b", "c",];
+    // array.splice(0, array.length);
+    // console.log(array);
+    // //lengthを0にする方法
+    // const array2 = ["a", "b", "c",];
+    // array2.length = 0;
+    // console.log(array2);
+
+    //空の配列を代入
+    let array = [1, 2, 3];
+    console.log(array.length);
+    array = [];
+    console.log(array.length);
