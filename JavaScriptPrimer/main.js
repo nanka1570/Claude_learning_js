@@ -574,8 +574,56 @@
     // array2.length = 0;
     // console.log(array2);
 
-    //空の配列を代入
-    let array = [1, 2, 3];
-    console.log(array.length);
-    array = [];
-    console.log(array.length);
+    // //空の配列を代入
+    // let array = [1, 2, 3];
+    // console.log(array.length);
+    // array = [];
+    // console.log(array.length);
+
+//破壊的メソッドと非破壊的メソッド
+// const array  = ["A" , "B", "C"];
+// const result = array.push("D");
+// console.log(result);
+// console.log(array);
+
+// const result = array.concat(["D", "E"]);
+// console.log(result);
+// console.log(array);
+// console.log(result === array);
+
+// //破壊的メソッド
+// //`array`の`index`番目の要素を削除知った配列を返す関数
+// //引数の`array`は破壊的に変更される
+// function removeAtIndex(array, index){
+//     array.splice(index, 1);
+//     console.log(array);     //デバック
+//     return array;
+// }
+// const array = ["A", "B", "C"];
+// const newArray = removeAtIndex(array, 1)
+// console.log(array);
+// console.log(newArray);
+
+// // `array`の`index`番目の要素を削除した配列を返す関数
+// function removeAtIndex(array, index) {
+//     // コピーを作成してから変更する
+//     const copiedArray = array.slice();
+//     console.log(copiedArray);
+//     copiedArray.splice(index, 1);
+//     return copiedArray;
+// }
+// const array = ["A", "B", "C"];
+// // `array`から1番目の要素を削除した配列を取得
+// const newArray = removeAtIndex(array, 1);
+// console.log(newArray); // => ["A", "C"]
+// // 元の`array`には影響がない
+// console.log(array); // => ["A", "B", "C"]
+
+//非破壊的なバージョン
+function removeAtIndex(array, index){
+    return array.toSpliced(index, 1);
+}
+const array = [1, 2, 3];
+const newArray = removeAtIndex(array, 1);
+console.log(array);
+console.log(newArray);
