@@ -619,11 +619,107 @@
 // // 元の`array`には影響がない
 // console.log(array); // => ["A", "B", "C"]
 
-//非破壊的なバージョン
-function removeAtIndex(array, index){
-    return array.toSpliced(index, 1);
-}
-const array = [1, 2, 3];
-const newArray = removeAtIndex(array, 1);
-console.log(array);
-console.log(newArray);
+// //非破壊的なバージョン
+// function removeAtIndex(array, index){
+//     return array.toSpliced(index, 1);
+// }
+// const array = [1, 2, 3];
+// const newArray = removeAtIndex(array, 1);
+// console.log(array);
+// console.log(newArray);
+
+///配列を反復処理するメソッド
+    ///forEach()
+    // const array = [1, 2, 3];
+    // array.forEach((currentValue, index, array) => {
+    //     console.log(currentValue, index, array);
+    // });
+
+    //map
+    // const array = [1, 2, 3];
+    // const newArray = array.map((currentValue, index, array) => {
+    //     return currentValue * 10;
+    // });
+    // console.log(newArray);
+    // console.log((array === newArray));
+
+    //filter
+    // const array = [1, 2, 3];
+    // const newArray = array.filter((currentValue, index, array) => {
+    //     return currentValue % 2 === 1;
+    // });
+    // console.log(newArray);
+    // console.log(array === newArray);
+
+    // reduce
+    // const array = [1, 2, 3];
+    // const totalValue = array.reduce((accumulator, currentValue, index, array) => {
+    //     return accumulator + currentValue;
+    // }, 0);
+    // console.log(totalValue);
+
+    //flat
+    // const array = [[["A"], "B"], "C"];
+    // console.log(array.flat());
+    // console.log(array.flat(1));
+
+    // console.log(array.flat(2));
+    // console.log(array.flat(Infinity));
+    // console.log(array);
+
+    // ///flatMap
+    // const array = [1, 2, 3];
+    // const doubled = array.flatMap((value) => {
+    //     return [value, value * 2];
+    // });
+    // console.log(doubled);
+
+    // //Object.groupBy静的メソッド
+    // const array = [1, 2, 3, 4, 5];
+    // const grouped = Object.groupBy(array, (currentValue) => {
+    //     return currentValue % 2 === 0 ? "even" : "odd";
+    // });
+    // console.log(grouped.even);
+    // console.log(grouped.odd);
+        // //Array.prototype.reduceメソッドで実装
+        // const array = [1, 2, 3, 4, 5];
+        // const grouped = array.reduce((accumulator, currentValue) => {
+        //     const key = currentValue % 2 === 0 ? "even" : "odd";
+        //     if(!accumulator[key]){
+        //         accumulator[key] = [];
+        //     }
+        //     accumulator[key].push(currentValue);
+        //     return accumulator;
+        // }, {});
+        // console.log(grouped.even);
+        // console.log(grouped.odd);
+
+    // Array-likeオブジェクト（argumentsメソッド）
+    // function myFunc(){
+    //     console.log(arguments[0]);
+    //     console.log(arguments[1]);
+    //     console.log(arguments[2]);
+    //     console.log(typeof arguments.forEach);
+    // }
+    // myFunc("a", "b", "c");
+
+    //メソッドチェーンと高階関数
+    // const array = ["a"].concat("b").concat("c");
+    // console.log(array);
+
+    // const ECMAScriptVersions = [
+    // { name: "ECMAScript 1", year: 1997 },
+    // { name: "ECMAScript 2", year: 1998 },
+    // { name: "ECMAScript 3", year: 1999 },
+    // { name: "ECMAScript 5", year: 2009 },
+    // { name: "ECMAScript 5.1", year: 2011 },
+    // { name: "ECMAScript 2015", year: 2015 },
+    // { name: "ECMAScript 2016", year: 2016 },
+    // { name: "ECMAScript 2017", year: 2017 },
+    // ];
+
+    // const versionNames = ECMAScriptVersions
+    //     .filter(ECMAScript => ECMAScript.year <= 2000)
+    //     .map(ECMAScript => ECMAScript.name);
+
+    // console.log(versionNames);
