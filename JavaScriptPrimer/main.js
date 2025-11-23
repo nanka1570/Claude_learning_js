@@ -723,3 +723,19 @@
     //     .map(ECMAScript => ECMAScript.name);
 
     // console.log(versionNames);
+
+//15 文字列
+//正規表現オブジェクト
+// const  pattern = /a+/;
+// console.log(pattern);
+
+//
+// function main() {
+//     conost invalidPattern = new RegExp("[");
+// }
+// main();
+
+// //
+// const spaceCount = 3;
+// const pattern = new RegExp(`¥¥s{${spaceCount}}`);
+
