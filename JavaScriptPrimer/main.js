@@ -739,3 +739,8 @@
 // const spaceCount = 3;
 // const pattern = new RegExp(`¥¥s{${spaceCount}}`);
 
+// //マッチした文字列の一部を取得
+// const pattern = /ECMAScript (¥d+)/;
+// const [all, capture1] = "ECMAScript 6".match(pattern);
+// console.log(all);
+// console.log(caputure1);
