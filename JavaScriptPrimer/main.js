@@ -744,3 +744,69 @@
 // const [all, capture1] = "ECMAScript 6".match(pattern);
 // console.log(all);
 // console.log(caputure1);
+
+// //matchAllメソッド
+// const str = "ABC あいう DE えお";
+// const alphabetsPattern = /[a-zA-Z]+/g;
+
+// const matchesIterator = str.matchAll(alphabetsPattern);
+// for(const match of matchesIterator){
+//     console.log(`match: "${match[0]}", index:${match.index}, input: "${match.input}"`);
+// }
+
+// //RegExpの`exec`メソッド
+// const str = "ABC あいう DE えお";
+// const alphabetsPattern = /[a-zA-Z]+/;
+
+// const results = alphabetsPattern.exec(str);
+// console.log(results.length);
+// console.log(results[0]);
+
+// console.log(results.index);
+
+// console.log(results.input);
+
+//RegExpの`exec`メソッドを`matchAll`のようにするには`while`をつかう
+// const str = "ABC あいう DE えお";
+// const alphabetsPattern = /[a-zA-Z]+/g;
+// let matches;
+// while(matches = alphabetsPattern.exec(str)){
+//      console.log(`match: ${matches[0]}, index: ${matches.index}, lastIndex: ${alphabetsPattern.lastIndex}`);
+// }
+
+// //文字列の置換/削除
+// const toDateJa = (dateString) => {
+//     return dateString.replace(/(\d{4})-(\d{2})-(\d{2})/g, (all, year, month, day) => {
+//         return `${year}年${month}月${day}日`;
+//     });
+// }
+
+// console.log(toDateJa("本日ハ晴天ナリ"));
+// console.log(toDateJa("今日は2017-03-01です"));
+
+// //URL文字列の結合
+// function getResource(baseURL, pathname){
+//     const url = baseURL + pathname;
+//     console.log(url);
+// }
+
+// const baseURL = "http://example.com/resources";
+// const pathname = "/example.js";
+// getResource(baseURL, pathname);
+
+// ベースURLとパスを結合した文字列を返す
+function baseJoin(baseURL, pathname) {
+    // 末尾に / がある場合は、/ を削除してから結合する
+    const stripSlashBaseURL = baseURL.replace(/\/$/, "");
+    return stripSlashBaseURL + pathname;
+}
+// `baseURL`と`pathname`にあるリソースを取得する
+function getResource(baseURL, pathname) {
+    const url = baseJoin(baseURL, pathname);
+    // baseURLの末尾に / があってもなくても同じ結果となる
+    console.log(url); // => "http://example.com/resources/example.js"
+    // 省略) リソースを取得する処理...
+}
+const baseURL = "http://example.com/resources/";
+const pathname = "/example.js";
+getResource(baseURL, pathname);
