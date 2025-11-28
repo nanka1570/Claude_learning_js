@@ -795,18 +795,159 @@
 // getResource(baseURL, pathname);
 
 // ベースURLとパスを結合した文字列を返す
-function baseJoin(baseURL, pathname) {
-    // 末尾に / がある場合は、/ を削除してから結合する
-    const stripSlashBaseURL = baseURL.replace(/\/$/, "");
-    return stripSlashBaseURL + pathname;
-}
-// `baseURL`と`pathname`にあるリソースを取得する
-function getResource(baseURL, pathname) {
-    const url = baseJoin(baseURL, pathname);
-    // baseURLの末尾に / があってもなくても同じ結果となる
-    console.log(url); // => "http://example.com/resources/example.js"
-    // 省略) リソースを取得する処理...
-}
-const baseURL = "http://example.com/resources/";
-const pathname = "/example.js";
-getResource(baseURL, pathname);
+// function baseJoin(baseURL, pathname) {
+//     // 末尾に / がある場合は、/ を削除してから結合する
+//     const stripSlashBaseURL = baseURL.replace(/\/$/, "");
+//     return stripSlashBaseURL + pathname;
+// }
+// // `baseURL`と`pathname`にあるリソースを取得する
+// function getResource(baseURL, pathname) {
+//     const url = baseJoin(baseURL, pathname);
+//     // baseURLの末尾に / があってもなくても同じ結果となる
+//     console.log(url); // => "http://example.com/resources/example.js"
+//     // 省略) リソースを取得する処理...
+// }
+// const baseURL = "http://example.com/resources/";
+// const pathname = "/example.js";
+// getResource(baseURL, pathname);
+
+//12 オブジェクト
+// // 問題1
+// const user = {
+//     name: "太郎",
+//     age: 25,
+//     email: "taro@example.com"
+// };
+// console.log(Object.keys(user));
+
+// console.log(Object.values(user));
+
+// console.log(Object.entries(user));
+
+
+// // 問題2
+// const defaultSettings = {
+//     theme: "light",
+//     language: "ja",
+//     notifications: true
+// };
+
+// const userSettings = {
+//     theme: "dark",
+//     notifications: false
+// };
+
+// const finalSettings = {
+//     ...defaultSettings,
+//     ...userSettings
+// };
+
+// console.log(finalSettings);
+
+
+// // 問題3
+// const product = {
+//     id: 1,
+//     name: "ノートPC",
+//     price: 100000
+// };
+
+// product.stock = 10;
+// console.log(product);
+
+// delete(product.price);
+// console.log(product);
+
+
+// // 問題4
+// const apiResponse = {
+//     data: {
+//         user: {
+//             name: "花子"
+//         }
+//     }
+// };
+
+// const emptyResponse = {};
+
+// const name1 = apiResponse?.data?.user?.name;
+// const name2 = emptyResponse?.data?.user?.name;
+
+// console.log(name1);
+// console.log(name2);
+
+
+// // 問題5
+// const isAdmin = true;
+// const isPremium = false;
+
+// const user = {
+//     name: "次郎",
+//     ...(isAdmin ? { role: "admin" } : {}),
+//     ...(isPremium ? { role: "Premium"} : {})
+// };
+
+// console.log(user);
+
+
+// // 問題6
+// const users = [
+//     { id: 1, name: "太郎", age: 25 },
+//     { id: 2, name: "花子", age: 30 },
+//     { id: 3, name: "次郎", age: 22 }
+// ];
+
+// const formatted = users.map(user => {
+//     const name = user.name;
+//     const age = user.age;
+
+//     return `${name}: ${age}歳`;
+// });
+
+// console.log(formatted);
+
+// // 問題7
+// const formData = {
+//     username: "taro123",
+//     email: "taro@example.com",
+//     password: "pass123"
+// };
+
+// const requiredFields = ["username", "email", "password"];
+
+
+
+// const isValid = requiredFields.every(field => {
+//         //Object.hasOwn
+//         // return Object.hasOwn(formData, field)
+//         //in演算子
+//         return  field in formData;
+//     });
+
+//     console.log(isValid);
+
+
+// 問題8
+const user = {
+    id: 1,
+    name: "太郎"
+};
+
+const profile = {
+    age: 25,
+    city: "東京"
+};
+
+const settings = {
+    theme: "dark",
+    language: "ja"
+};
+
+const merged = {
+    ...user,
+    ...profile,
+    ...settings,
+    email: "taro@example.com"
+};
+
+console.log(merged);
