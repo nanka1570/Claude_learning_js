@@ -927,27 +927,48 @@
 //     console.log(isValid);
 
 
-// 問題8
-const user = {
-    id: 1,
-    name: "太郎"
-};
+// // 問題8
+// const user = {
+//     id: 1,
+//     name: "太郎"
+// };
 
-const profile = {
-    age: 25,
-    city: "東京"
-};
+// const profile = {
+//     age: 25,
+//     city: "東京"
+// };
 
-const settings = {
-    theme: "dark",
-    language: "ja"
-};
+// const settings = {
+//     theme: "dark",
+//     language: "ja"
+// };
 
-const merged = {
-    ...user,
-    ...profile,
-    ...settings,
-    email: "taro@example.com"
-};
+// const merged = {
+//     ...user,
+//     ...profile,
+//     ...settings,
+//     email: "taro@example.com"
+// };
 
-console.log(merged);
+// console.log(merged);
+
+
+//JSON
+const json = `{"id":1, "name": "js-primer"}`;
+const obj = JSON.parse(json);
+console.log(obj.id);
+console.log(obj.name);
+
+    //オブジェクトをJSON
+    const j_obj = { id: 1, name: "js-primer", bio: null };
+    console.log(JSON.stringify(j_obj));
+
+    const replacer = (key, value) => {
+        if(value == null){
+            return undefined;
+        }
+        return value;
+    };
+    console.log(JSON.stringify(obj, replacer));
+
+    //
