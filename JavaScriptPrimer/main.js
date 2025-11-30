@@ -953,22 +953,40 @@
 // console.log(merged);
 
 
-//JSON
-const json = `{"id":1, "name": "js-primer"}`;
-const obj = JSON.parse(json);
-console.log(obj.id);
-console.log(obj.name);
+// //JSON
+// const json = `{"id":1, "name": "js-primer"}`;
+// const obj = JSON.parse(json);
+// console.log(obj.id);
+// console.log(obj.name);
 
-    //オブジェクトをJSON
-    const j_obj = { id: 1, name: "js-primer", bio: null };
-    console.log(JSON.stringify(j_obj));
+//     //オブジェクトをJSON
+//     const j_obj = { id: 1, name: "js-primer", bio: null };
+//     console.log(JSON.stringify(j_obj));
 
-    const replacer = (key, value) => {
-        if(value == null){
-            return undefined;
-        }
-        return value;
-    };
-    console.log(JSON.stringify(obj, replacer));
+//     const replacer = (key, value) => {
+//         if(value == null){
+//             return undefined;
+//         }
+//         return value;
+//     };
+//     console.log(JSON.stringify(obj, replacer));
 
-    //
+//     //
+
+//export/import基礎編
+// //問題1
+import { add, multiply } from "./module/utils.js";
+
+console.log(add(2, 3));
+console.log(multiply(4, 5));
+
+//問題２
+import myModule from "./module/Button.js";
+console.log(myModule);
+
+//問題3
+import UserCard from "./module/UserCard.js";
+import { formatName } from "./module/UserCard.js";
+
+console.log(UserCard({ name: "太郎" }));
+console.log(formatName( "太郎", "山田" ));
