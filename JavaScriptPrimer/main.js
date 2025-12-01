@@ -974,19 +974,61 @@
 //     //
 
 //export/import基礎編
-// //問題1
-import { add, multiply } from "./module/utils.js";
+// // //問題1
+// import { add, multiply } from "./module/utils.js";
 
-console.log(add(2, 3));
-console.log(multiply(4, 5));
+// console.log(add(2, 3));
+// console.log(multiply(4, 5));
 
-//問題２
-import myModule from "./module/Button.js";
-console.log(myModule);
+// //問題２
+// import myModule from "./module/Button.js";
+// console.log(myModule);
 
-//問題3
-import UserCard from "./module/UserCard.js";
-import { formatName } from "./module/UserCard.js";
+// //問題3
+// import UserCard from "./module/UserCard.js";
+// import { formatName } from "./module/UserCard.js";
 
-console.log(UserCard({ name: "太郎" }));
-console.log(formatName( "太郎", "山田" ));
+// console.log(UserCard({ name: "太郎" }));
+// console.log(formatName( "太郎", "山田" ));
+
+
+//非同期処理
+
+    //同期処理
+    function taskA() {
+        console.log("タスクAを実行 at " + Date.now());
+    }
+    function taskB() {
+        console.log("タスクBを実行 at " + Date.now());
+    }
+
+    function blockTime(timeout) {
+        const startTime = Date.now();
+
+        while (true) {
+            const diffTime = Date.now() - startTime;
+            if (diffTime >= timeout) {
+                return;
+            }
+        }
+    }
+    taskA();
+    blockTime(1000);
+    taskB();
+
+    //非同期処理
+    function taskC() {
+        console.log("タスクCを実行 at " + Date.now());
+    }
+    function taskD() {
+        console.log("タスクDを実行 at " + Date.now());
+    }
+    function taskAsync() {
+        console.log("非同期のタスクを実行 at " + Date.now());
+    }
+
+    taskC();
+    setTimeout(() => {
+        taskAsync();
+    }, 1000);
+    taskD();

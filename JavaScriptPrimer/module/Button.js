@@ -2,4 +2,4 @@
 function Button() {
     return "ボタン";
 }
-export default Button();
+export default Button;
