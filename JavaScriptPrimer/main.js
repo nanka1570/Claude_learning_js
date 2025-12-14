@@ -994,41 +994,334 @@
 
 //非同期処理
 
-    //同期処理
-    function taskA() {
-        console.log("タスクAを実行 at " + Date.now());
-    }
-    function taskB() {
-        console.log("タスクBを実行 at " + Date.now());
-    }
+    // //同期処理
+    // function taskA() {
+    //     console.log("タスクAを実行 at " + Date.now());
+    // }
+    // function taskB() {
+    //     console.log("タスクBを実行 at " + Date.now());
+    // }
 
-    function blockTime(timeout) {
-        const startTime = Date.now();
+    // function blockTime(timeout) {
+    //     const startTime = Date.now();
 
-        while (true) {
-            const diffTime = Date.now() - startTime;
-            if (diffTime >= timeout) {
-                return;
+    //     while (true) {
+    //         const diffTime = Date.now() - startTime;
+    //         if (diffTime >= timeout) {
+    //             return;
+    //         }
+    //     }
+    // }
+    // taskA();
+    // blockTime(1000);
+    // taskB();
+
+    // //非同期処理
+    // function taskC() {
+    //     console.log("タスクCを実行 at " + Date.now());
+    // }
+    // function taskD() {
+    //     console.log("タスクDを実行 at " + Date.now());
+    // }
+    // function taskAsync() {
+    //     console.log("非同期のタスクを実行 at " + Date.now());
+    // }
+
+    // taskC();
+    // setTimeout(() => {
+    //     taskAsync();
+    // }, 1000);
+    // taskD();
+
+
+//非同期処理
+    // //問題１
+    // function wait1Second() {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve("成功");
+    //         }, 1000);
+    //     });
+    // }
+
+    // function randomPromise() {
+    //     return new Promise((resolve, reject) => {
+    //         if(Math.random() > 0.5){
+    //             resolve("成功");
+    //         }else{
+    //             reject(new Error("失敗"));
+    //         }
+    //     });
+    // }
+
+    // wait1Second().then((result) => {
+    //     console.log(result);
+    // });
+
+    // randomPromise()
+    // .then((result) => console.log("成功：", result))
+    // .catch((error) => console.log("失敗：", error))
+
+    // //問題２
+    // function fetchUser(UserId) {
+    //     return Promise.resolve({id:UserId, name:"太郎"});
+    // }
+
+    // function fetchPosts(userId) {
+    //     return Promise.resolve([
+    //         {id: 1, title: "投稿１"},
+    //         {id: 2, title: "投稿２"}
+    //     ]);
+    // }
+
+    // fetchUser(1)
+    // .then((user) => {
+    //     console.log("ユーザー：", user.name);
+    //     return fetchPosts(user.id);
+    // })
+    // .then((posts) => {
+    //     console.log("投稿数：", posts.length);
+    // })
+
+    // //問題３
+    // function fetchUser(userId) {
+    // return Promise.resolve({ id: userId, name: "太郎" });
+    // }
+
+    // function fetchPosts(userId) {
+    //     return Promise.resolve([
+    //         { id: 1, title: "投稿1" },
+    //         { id: 2, title: "投稿2" }
+    //     ]);
+    // }
+
+    // async function getUserPosts(UserId) {
+    //     const user = await fetchUser(UserId);
+    //     console.log("ユーザー：", user.name);
+
+    //     const posts = await fetchPosts(user.id);
+    //     console.log("投稿数：", posts.length);
+
+    //     return posts;
+    // }
+
+    // getUserPosts(1).then((posts) => {
+    //     console.log(posts);
+    // });
+
+    // //問題４
+    // function fetchData(url) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             if(url.startsWith("http")){
+    //                 resolve({data: "成功"});
+    //             }else{
+    //                 reject(new Error("無効なURL"));
+    //             }
+    //         }, 1000);
+    //     });
+    // }
+
+    // async function getData(url) {
+    //     try {
+    //         const data = await fetchData(url);
+    //         console.log("成功：", data);
+    //         return data;
+    //     } catch (error) {
+    //         console.log("エラー：", error.message);
+    //         return null;
+    //     }
+    // }
+
+    // getData("http://example.com");
+    // getData("invalid-url");
+
+    // //問題５
+    // function fetchUsers() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             resolve([{id: 1, name: "太郎"}]);
+    //         }, 1000);
+    //     });
+    // }
+
+    // function fetchPosts() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             resolve([{id: 1, title: "投稿１"}]);
+    //         },1000 );
+    //     });
+    // }
+
+    // function fetchComments() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //            resolve([{id: 1, text: "コメント1"}]);
+    //         }, 1000);
+    //     });
+    // }
+
+    // async function fetchAllData() {
+    //     const [users, posts, comments] = await Promise.all([
+    //         fetchUsers(), 
+    //         fetchPosts(), 
+    //         fetchComments()
+    //     ]);
+    //     return {users, posts, comments};
+    // }
+
+    // fetchAllData().then((result) => {
+    //     console.log("全データ:", result);
+    // });
+
+    // //問題６
+    // function fetchA() {
+    // return new Promise((resolve) => {
+    //     setTimeout(() => {
+    //         resolve("A");
+    //     }, 1000);  // 1秒かかる
+    //     });
+    // }
+
+    // function fetchB() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             resolve("B");
+    //         }, 1000);  // 1秒かかる
+    //     });
+    // }
+
+    // function fetchC() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             resolve("C");
+    //         }, 1000);  // 1秒かかる
+    //     });
+    // }
+
+    // async function  patternA() {
+    //     const a = await fetchA();
+    //     const b = await fetchB();
+    //     const c = await fetchC();
+    //     return [a, b, c];
+    // }
+
+    // async function patternB() {
+    //     const [a, b, c] = await Promise.all([
+    //         fetchA(),
+    //         fetchB(),
+    //         fetchC()
+    //     ]);
+    //     return [a, b, c];
+    // }
+
+    //非同期処理 総合演習
+    //課題１
+    function fetchUser(userId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (userId === 1) {
+                resolve({ id: 1, name: "太郎", age: 25 });
+            } else {
+                reject(new Error("ユーザーが見つかりません"));
             }
+            }, 1000);
+        });
+    }
+
+    function fetchUserPosts(userId) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve([
+                    { id: 1, title: "投稿1", likes: 10 },
+                    { id: 2, title: "投稿2", likes: 20 },
+                    { id: 3, title: "投稿3", likes: 15 }
+                ]);
+            }, 1000);
+        });
+    }
+
+    function fetchPostComments(postId) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve([
+                    { id: 1, text: "コメント1" },
+                    { id: 2, text: "コメント2" }
+                ]);
+            }, 500);
+        });
+    }
+
+    async function getUserProfile(userId) {
+        try {
+            const user = await fetchUser(userId);
+            const posts = await fetchUserPosts(user.id);
+            return {user, posts};
+        }catch(error){
+            throw error;
         }
     }
-    taskA();
-    blockTime(1000);
-    taskB();
 
-    //非同期処理
-    function taskC() {
-        console.log("タスクCを実行 at " + Date.now());
+    getUserProfile(1).then((profile) => {
+    console.log("ユーザー:", profile.user.name);
+    console.log("投稿数:", profile.posts.length);
+    });
+
+    // 失敗する場合
+    getUserProfile(999).then((profile) => {
+        console.log("成功:", profile);
+    }).catch((error) => {
+        console.log("エラー:", error.message);
+    });
+
+    //課題２
+    async function getUserStats(UserId) {
+        const profile = await getUserProfile(UserId);
+        const postCount = profile.posts.length;
+        const totalLikes = profile.posts.reduce((sum, post) => {
+                return sum + post.likes;
+            }, 0);
+        const avgLikes = totalLikes / postCount;
+        return {postCount, totalLikes, avgLikes};
     }
-    function taskD() {
-        console.log("タスクDを実行 at " + Date.now());
-    }
-    function taskAsync() {
-        console.log("非同期のタスクを実行 at " + Date.now());
+    
+    getUserStats(1).then((stats) => {
+        console.log("統計：", stats);
+    });
+
+    //課題３
+    async function getAllUsersStats(userIds){
+        const promises = userIds.map((userId) => {
+            return getUserStats(userId).catch((error) => null);
+        });
+        const results = await Promise.all(promises);
+        return results;
     }
 
-    taskC();
-    setTimeout(() => {
-        taskAsync();
-    }, 1000);
-    taskD();
+    getAllUsersStats([1, 999, 1]).then((allStats) => {
+        console.log("全ユーザー統計：", allStats);
+    });
+
+    //問題４
+    async function getPostWithCommentCount(userId) {
+        const profile = await getUserProfile(userId);
+        const posts = profile.posts;
+
+        const promises = posts.map((post) => {
+            return fetchPostComments(post.id);
+        });
+        const commentsArray = await Promise.all(promises);
+        
+        const postsWithCommentCount = posts.map((post, index) => {
+            const comments = commentsArray[index];
+            return {
+                ...post,
+                commentCount: comments.length
+            };
+        });
+        return postsWithCommentCount;
+    }
+
+    getPostWithCommentCount(1).then((posts) => {
+        console.log("投稿とコメント数：", posts);
+    });
