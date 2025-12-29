@@ -42,7 +42,7 @@ export const Todo = () => {
   };
   return(
     <>
-      <InputTodo todoText={todoText} onChage={onChangeTodoText} onClick={onClickAdd}/>
+      <InputTodo todoText={todoText} onChange={onChangeTodoText} onClick={onClickAdd}/>
 
       <IncompleteTodos todos={incompleteTodos} onclickComplete={onclickcomplete} onclickDelete={onClickDelete}/>
       <div className="complete-area">
