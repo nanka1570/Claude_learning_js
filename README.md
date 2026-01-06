@@ -1,146 +1,89 @@
 # Claude_learning_js
-JavaScript学習用
 
-Claudeを使用し、JavaScriptの学習を行う。
-目標は、Reactの学習まで。
+JavaScript・React学習用リポジトリ
 
-# 📚 React Learning Journey & Portfolio
+Claudeを使用し、JavaScript〜Reactの基礎学習を行いました。
 
-> Web開発エンジニアへの転職を目指した3ヶ月間の学習記録
+> **📢 続編について**  
+> このリポジトリはReact基礎（TODOアプリ作成）までの学習記録です。  
+> ポートフォリオ開発は **[facility_reservation_system](https://github.com/nanka1570/facility_reservation_system)** で進めています。
 
-[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org/)
+---
+
+## 📚 学習内容
+
 [![JavaScript](https://img.shields.io/badge/JavaScript-100%25完了-F7DF1E?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Phase](https://img.shields.io/badge/Phase-React準備中-blue)](https://github.com/nanka1570)
-[![507Days](https://img.shields.io/badge/507日ルール-継続中🔥-orange)](https://github.com/nanka1570)
+[![React](https://img.shields.io/badge/React-100%25完了-61DAFB?logo=react)](https://reactjs.org/)
+[![500Days](https://img.shields.io/badge/500日ルール-継続中🔥-orange)](https://github.com/nanka1570)
+
+| フェーズ | 内容 | 期間 | 状態 |
+|---------|------|------|------|
+| Phase 1 | JavaScript基礎 | 2025/11/10〜12/14 | ✅ 完了 |
+| Phase 2 | React基礎 | 2025/12/21〜12/30 | ✅ 完了 |
 
 ---
 
-## 👨‍💻 About Me
-
-| 項目 | 内容 |
-|------|------|
-| 🎓 学歴 | 情報系専門学校卒業 |
-| 💼 現職 | 富士ソフト株式会社（組み込み系1年目） |
-| 🎯 目標 | Web開発企業への転職（React使用） |
-| 📅 学習期間 | 2025年11月〜2026年2月（3ヶ月） |
-| ⏰ 学習時間 | 平日30分〜1時間 / 休日3〜4時間 |
-
----
-
-## 📊 学習進捗（2025/12/15更新）
-
-### Phase 1: JavaScript Primer ✅ 完了！
+## 📊 Phase 1: JavaScript基礎
 
 ```
 進捗: ████████████████████ 100%
 ```
 
-| 項目 | 状態 | 理解度 |
-|------|------|--------|
-| 変数・関数・演算子 | ✅ | 90% |
-| 条件分岐・ループ | ✅ | 90% |
-| 配列メソッド（map, filter, reduce） | ✅ | 90% |
-| 文字列・正規表現 | ✅ | 80% |
-| オブジェクト（分割代入, スプレッド構文） | ✅ | 90% |
-| JSON | ✅ | 95% |
-| ECMAScriptモジュール | ✅ | 85% |
-| **非同期処理（Promise, async/await）** | ✅ | **95%** |
-
-### 非同期処理 詳細（12/7-14完了）
-
-| 項目 | 理解度 |
-|------|--------|
-| Promise基礎・チェーン | 95% |
-| Promise.all / Promise.race | 90% |
-| async/await | 90% |
-| try/catchエラーハンドリング | 95% |
-| 実践演習（API連携） | 100% |
+| 項目 | 理解度 | 完了日 |
+|------|--------|--------|
+| 変数・関数・演算子 | 90% | 11/10 |
+| 条件分岐・ループ | 90% | 11/17 |
+| 配列メソッド（map, filter, reduce） | 90% | 11/21 |
+| 文字列・正規表現 | 80% | 11/26 |
+| オブジェクト（分割代入, スプレッド構文） | 90% | 11/27 |
+| JSON | 95% | 11/29 |
+| ECMAScriptモジュール | 85% | 11/30 |
+| 非同期処理（Promise, async/await） | 95% | 12/14 |
 
 ---
 
-### Phase 2: React（12/21開始予定）
+## 📊 Phase 2: React基礎
 
 ```
-進捗: ░░░░░░░░░░░░░░░░░░░░ 0%
+進捗: ████████████████████ 100%
 ```
 
-| 項目 | 状態 | 予定 |
-|------|------|------|
-| 環境構築 | ⏳ | 12/17-18 |
-| JSX・コンポーネント | ⏳ | 12/21-22 |
-| Props | ⏳ | 12/22 |
-| State・useState | ⏳ | 12/23-24 |
-| useEffect | ⏳ | 12/25-26 |
-| API連携 | ⏳ | 12/27-29 |
+| 項目 | 理解度 | 完了日 |
+|------|--------|--------|
+| 環境構築（Vite） | 100% | 12/21 |
+| JSX・コンポーネント | 90% | 12/22 |
+| Props | 85% | 12/23 |
+| State・useState | 90% | 12/24 |
+| useEffect | 85% | 12/28 |
+| **TODOアプリ作成** | **完成** | **12/30** |
+
+### 🎉 成果物：TODOアプリ
+
+React学習の集大成として、TODOアプリを作成しました。
+
+**実装した機能：**
+- タスクの追加・削除・完了切り替え
+- useStateによる状態管理
+- useEffectによる副作用処理
+- コンポーネント分割設計
 
 ---
 
-## 🗓️ 学習ロードマップ
+## 🗓️ 学習タイムライン
 
 ```
 2025/11 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     11/10 ┃ JavaScript Primer 開始
-    11/21 ┃ 配列メソッド完了 ✅
-    11/27 ┃ オブジェクト完了 ✅
-    11/30 ┃ ECMAScriptモジュール完了 ✅
+    11/21 ┃ 配列メソッド完了
+    11/27 ┃ オブジェクト完了
+    11/30 ┃ ECMAScriptモジュール完了
 
 2025/12 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     12/7  ┃ 非同期処理学習開始
-    12/14 ┃ 🎉 非同期処理完了（理解度95%）
-    12/15 ┃ 📍 現在地（休養日）
-    12/17 ┃ React環境構築準備
-    12/18 ┃ React環境構築
+    12/14 ┃ 🎉 JavaScript基礎 100%完了
     12/21 ┃ 🚀 React学習開始
-
-2026/01 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1/12  ┃ Udemy講座完走予定
-    1/13  ┃ ポートフォリオ設計開始
-
-2026/02 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    2/9   ┃ 🎉 ポートフォリオ完成 → 転職活動本格化
+    12/30 ┃ 🎉 React基礎完了 & TODOアプリ完成
 ```
-
----
-
-## 🎯 次のステップ
-
-### 今週（12/15-22）
-
-- [x] JavaScript基礎文法 100%完了
-- [x] 非同期処理 完全習得
-- [ ] React環境構築（12/17-18）
-- [ ] React学習開始（12/21-22）
-- [ ] Udemy React講座開始
-
-### 今後の予定
-
-| 時期 | 内容 |
-|------|------|
-| 12/21-22 | React学習開始 |
-| 1月中旬 | ポートフォリオ設計 |
-| 1月下旬〜2月 | ポートフォリオ開発 |
-| 2月〜 | 転職活動本格化 |
-
----
-
-## 🎯 ポートフォリオ計画
-
-### 施設予約システム（React版）
-
-> 専門学校の卒業制作をモダンWeb技術で再実装
-
-| 項目 | 内容 |
-|------|------|
-| Status | 📝 設計予定（2026年1月〜） |
-| Frontend | React 18, React Router |
-| Backend | Supabase（認証・DB） |
-| Deploy | Vercel |
-
-#### 予定機能
-- ユーザー認証（ログイン・登録）
-- 施設予約のCRUD操作
-- 予約状況のカレンダー表示
-- 管理者ダッシュボード
 
 ---
 
@@ -151,23 +94,9 @@ Claudeを使用し、JavaScriptの学習を行う。
 - [x] もう怖くないGit！チーム開発で必要なGitを完全マスター
 
 ### 参考サイト
-- JavaScript Primer（メイン教材）✅ 完了
+- JavaScript Primer（メイン教材）
 - MDN Web Docs
 - React公式ドキュメント
-
----
-
-## 💡 学習スタイル
-
-### 507日ルール 🔥
-毎日5〜10分は必ず学習を継続
-
-### 改善できた点（12/7-14）
-| Before | After |
-|--------|-------|
-| 深夜学習（2:00まで） | 23時終了を徹底 |
-| 完璧主義 | 70-80%で進む |
-| 長時間学習 | 短時間集中 |
 
 ---
 
@@ -176,26 +105,32 @@ Claudeを使用し、JavaScriptの学習を行う。
 ```
 Claude_learning_js/
 ├── README.md
-├── javascript/           # ✅ 完了
-│   ├── array/            # 配列メソッド
-│   ├── object/           # オブジェクト
-│   ├── async/            # 非同期処理 ✅
-│   └── module/           # ESモジュール
-├── react/                # 12/21〜
-└── portfolio/            # 1月〜
-```
+├── javascriptPrimer/
+│   ├── module/                     　# ESモジュール
+│   ├── index.html                    # htmlファイル
+│   ├── main.js                       # 学習したJavaScriptのサンプルを実行するファイル
+│   └── 学習記録_JavaScriptPrimer.md   # JavaScriptの学習記録 
+└── Udemy/
+    ├── React_Vite/
+    │   └── src/
+    │       ├── JavaScript_todo_program   # JavaScript版TODOアプリ
+    │       ├── React_practice_program    # 学習したReactのサンプルを実行するファイル
+    │       └── React_todo_program        # React版TODOアプリ
+    └── 学習記録_React.md                  # Reactの学習記録
+``` 
 
 ---
 
-## 📝 最近の学習記録
+## 💡 学習スタイル
 
-| 日付 | 内容 |
-|------|------|
-| **12/14（日）** | **🎉 非同期処理完了！理解度95%達成** |
-| 12/13（土） | 総合演習（問題1-6, 課題1-4）完了 |
-| 12/10（水） | async/await習得 |
-| 12/9（火） | Promise.all/race習得 |
-| 12/7（土） | 非同期処理学習再開 |
+### 500日ルール 🔥
+毎日5〜10分は必ず学習を継続
+
+### 学習方針
+| ルール | 内容 |
+|--------|------|
+| 70%理解で進む | 完璧主義を避ける |
+| 動かしながら学ぶ | 読む:書く = 3:7 |
 
 ---
 
@@ -204,11 +139,19 @@ Claude_learning_js/
 | 項目 | 値 |
 |------|-----|
 | 学習開始 | 2025/11/10 |
-| 現在 | 2025/12/15 |
-| JavaScript完了日 | 2025/12/14 |
-| 累計学習時間 | 約45時間 |
-| 連続学習 | 継続中🔥 |
+| JavaScript完了 | 2025/12/14 |
+| React完了 | 2025/12/30 |
+| 累計学習時間 | 約50時間 |
 
 ---
 
-*Last Updated: 2025/12/15*
+## 🔗 関連リポジトリ
+
+| リポジトリ | 内容 |
+|-----------|------|
+| **このリポジトリ** | JavaScript・React基礎学習 |
+| **[facility_reservation_system](https://github.com/nanka1570/facility_reservation_system)** | 施設予約システム |
+
+---
+
+*Last Updated: 2026/1/6*
